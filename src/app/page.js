@@ -1,4 +1,5 @@
 import Btndecrement from "./ui/Btndecrement";
+import Navbar from "./ui/Navbar";
 
 async function getProduct(){
   const res = await fetch('https://www.freetogame.com/api/games')
@@ -10,14 +11,15 @@ export default async function Home() {
   console.log(products);
   return (
     <div className="min-w-screen min-h-screen">
+    <Navbar></Navbar>
       <Btndecrement></Btndecrement>
-      {
+      {/* {
         products.map((Element,id)=>{
           return(
             <h1>{Element.title}</h1>
           )
         })
-      }
+      } */}
     </div>
   );
 }
