@@ -11,7 +11,7 @@ export default async function Page() {
     return(
     <div className="min-w-screen bg-[#3C5772] min-h-screen flex justify-center items-center flex-col">
         <Navbar></Navbar>
-        <div className=" w-[115rem] mt-16 flex justify-center items-center flex-wrap gap-10">
+        <div className="  mt-16 flex justify-center items-center flex-wrap gap-10">
             {
                 products.map((Element,id)=>{
                     return(
