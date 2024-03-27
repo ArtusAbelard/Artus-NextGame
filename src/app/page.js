@@ -1,7 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import { useDispatch ,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+// import { useDispatch ,useSelector } from "react-redux";
 import { increment,decrement } from "@/store/slice";
 
 export default function Home() {
