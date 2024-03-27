@@ -10,7 +10,7 @@ export default async function Home() {
   const products = await getProduct()
   console.log(products);
   return (
-    <div className="min-w-screen min-h-screen">
+    <div className="min-w-screen bg-slate-600 min-h-screen">
     <Navbar></Navbar>
       <Btndecrement></Btndecrement>
       {/* {
