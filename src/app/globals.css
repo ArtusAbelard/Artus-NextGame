@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'CustomFont'; 
-  src: url('../app/ui/fonts/GothamRnd-Medium.otf'); 
-}
-@font-face {
-  font-family: 'CustomFontLight'; 
-  src: url('../app/ui/fonts/GothamRnd-Light.otf'); 
-} */
-
-
 .box {
     width: 140px;
     height: auto;
