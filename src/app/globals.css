@@ -3,17 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'CustomFont'; /* Name your font family */
-  src: url('../app/ui/fonts/GothamRnd-Medium.otf'); /* Locate the .ttf file within your directory*/
+  font-family: 'CustomFont'; 
+  src: url('../app/ui/fonts/GothamRnd-Medium.otf'); 
 }
 @font-face {
-  font-family: 'CustomFontLight'; /* Name your font family */
-  src: url('../app/ui/fonts/GothamRnd-Light.otf'); /* Locate the .ttf file within your directory*/
+  font-family: 'CustomFontLight'; 
+  src: url('../app/ui/fonts/GothamRnd-Light.otf'); 
 }
 
-*{
-  font-family: CustomFontLight ; 
-}
 
 .box {
     width: 140px;
