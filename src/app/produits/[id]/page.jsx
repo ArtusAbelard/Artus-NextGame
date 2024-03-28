@@ -9,11 +9,10 @@ async function getProduct(){
 export default async function Product({params}) {
     const products = await getProduct()
 
-    // console.log(params.id);
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>
-            <Details id={params.id}></Details>
+            <Details id={params.id} products={products}></Details>
             
         </div>
     )

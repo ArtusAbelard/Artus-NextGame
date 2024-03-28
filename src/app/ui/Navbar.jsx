@@ -1,6 +1,6 @@
 'use client';
 
-import logoremove from '../../../public/img/Geek-World-removebg-preview.png'
+import logoremove from '../../../public/img/Geek-Hub-removebg-preview.png'
 import React from 'react'
 import Link from 'next/link'
 import { useSelector, useDispatch } from "react-redux"

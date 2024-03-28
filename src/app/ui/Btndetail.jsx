@@ -9,7 +9,7 @@ export default function Btndetail({id}) {
     
     return (
         <button onClick={detailroot}  className="btn top-[22rem] border-0 bg-[#E08821] absolute">
-        Details
+            Details
         </button>
     )
 }
