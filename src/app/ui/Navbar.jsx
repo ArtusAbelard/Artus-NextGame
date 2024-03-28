@@ -1,10 +1,14 @@
 'use client';
 
+import logo from '../../../public/img/Geek-World.png'
+import logoremove from '../../../public/img/Geek-World-removebg-preview.png'
 import React from 'react'
 import darkmode from '../../../public/img/pngtree.jpg'
 import Link from 'next/link'
 import { useSelector, useDispatch } from "react-redux"
 import { colorset } from '@/store/darkmod';
+import Image from 'next/image';
+
 
 export default function Navbar(props) {
 
@@ -24,7 +28,13 @@ export default function Navbar(props) {
                     <li className='hover:text-[#E08821]'><Link href='/favoris'>Favoris</Link></li>
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl invert ">GeekWorld</a>
+                
+                <Image
+                className='w-[12rem] h-[4rem]'
+                alt=""
+                src={logoremove}
+                ></Image>
+                {/* <a className="btn btn-ghost text-2xl invert ">GeekWorld</a> */}
                 <img onClick={()=>{dispatch(colorset(!color.actual))}} className='h-8 w-8 me-3 cursor-pointer invert' src='https://static.thenounproject.com/png/4066357-200.png' alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
