@@ -1,16 +1,17 @@
+"use client"
+
 import Btndecrement from "./ui/Btndecrement";
 import Navbar from "./ui/Navbar";
+import { useSelector } from "react-redux";
 
-async function getProduct(){
-  const res = await fetch('https://www.freetogame.com/api/games')
-  return res.json()
-}
 
-export default async function Home() {
-  const products = await getProduct()
-  console.log(products);
+export default function Home() {
+  
+  const color = useSelector((state) => state.color)
+
+
   return (
-    <div className="min-w-screen bg-slate-600 min-h-screen">
+    <div className={`min-w-screen  min-h-screen ${color.actual==true?"bg-[#E1E1E1]":"bg-[#1e1e1e]"}`}>
     <Navbar></Navbar>
       <Btndecrement></Btndecrement>
       {/* {
