@@ -13,7 +13,7 @@ export default function Navbar(props) {
     const dispatch = useDispatch();
 
     return (
-        <div className={` navbar z-50 h-[6rem] bg-[#0E0E0E] ${color.actual==true?"invert":""}`}>
+        <div className={` navbar z-50 h-[6rem] navshadow bg-[#0E0E0E] ${color.actual==true?"invert":""}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@ export default function Navbar(props) {
                 </div>
                 <ul tabIndex={0} className="menu menu-sm text-white dropdown-content mt-3 z-[1] p-2 shadow bg-[#0E0E0E] border-[1px] rounded-box w-52">
                     <li className='hover:text-[#E08821]'><Link href='/'>Home</Link></li>
-                    <li className='hover:text-[#E08821]'><Link href='/produits'>Produits</Link></li>
+                    <li className='hover:text-[#E08821]'><Link href='/produits'>Games</Link></li>
                     <li className='hover:text-[#E08821]'><Link href='/favoris'>Favoris</Link></li>
                 </ul>
                 </div>
@@ -31,14 +31,14 @@ export default function Navbar(props) {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="text-xl menu menu-horizontal text-[#ECE6CE] px-1">
-                    <li><Link href='/'><button><span className={`box  ${color.actual==true?"text-white":"invert"}`}>Home</span></button></Link></li>
-                    <li><Link href='/produits'><button><span className={`box ${color.actual==true?"text-white":"invert"}`}>Produits</span></button></Link></li>
-                    <li><Link href='/favoris'><button><span className={`box ${color.actual==true?"text-white":"invert"}`}>Favoris</span></button></Link></li>
+                    <li><Link href='/'><button><span className={`box  tracking-widest ${color.actual==true?"text-white":"invert"}`}>Home</span></button></Link></li>
+                    <li><Link href='/produits'><button><span className={`box tracking-widest ${color.actual==true?"text-white":"invert"}`}>Games</span></button></Link></li>
+                    <li><Link href='/favoris'><button><span className={`box tracking-widest ${color.actual==true?"text-white":"invert"}`}>Favoris</span></button></Link></li>
                 </ul>
             </div>
             <div className="navbar-end">        
                 <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0">Conexion</div>
+                    <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black">Conexion</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
                             <li className='hover:text-[#E08821]'><a>Conexion</a></li>
                             <li className='hover:text-[#E08821]'><a>Inscription</a></li>

@@ -82,3 +82,19 @@
     box-shadow: rgb(212, 152, 33) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     
   }
+  .bgdetail{
+    background-image: url(./../../public/img/vecteezy.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bgnoborder{
+    background-image: url(./../../public/img/vecteezynoborder.jpg);
+    background-position: center;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+  }
+  .navshadow{
+    box-shadow: rgb(224, 136, 33) 0px 20px 30px -10px;
+  }
+ 

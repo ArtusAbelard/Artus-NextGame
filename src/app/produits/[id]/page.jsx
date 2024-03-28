@@ -13,7 +13,6 @@ export default async function Product({params}) {
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>
             <Details id={params.id} products={products}></Details>
-            
         </div>
     )
 
