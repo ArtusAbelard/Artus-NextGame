@@ -17,9 +17,9 @@ export default function Details(props) {
                         </div>
                     </div>
                     <div className='h-full w-1/2 flex items-center  justify-center flex-col text-white max-[426px]:w-full '>
-                        <h1 className='text-2xl font-bold mt-[10rem] tracking-wide max-[426px]:mt-0 max-[426px]:w-[16rem]'>About {props.products[props.id].title} :</h1>
-                        <p className='w-[30rem] text-xl mt-7  max-[1030px]:w-[23rem] max-[769px]:w-[16rem]'>{props.products[props.id].short_description}</p>
-                        <ul className='w-[30rem] text-xl mt-5 gap-2 flex flex-col max-[1030px]:w-[23rem] max-[769px]:w-[16rem] max-[426px]:mb-[23rem]'>
+                        <h1 className='text-2xl font-bold mt-[10rem] tracking-wide max-[426px]:mt-0 max-[426px]:w-[16rem] max-[426px]:text-xl'>About {props.products[props.id].title} :</h1>
+                        <p className='w-[30rem] text-xl mt-7  max-[1030px]:w-[23rem] max-[769px]:w-[16rem] max-[426px]:text-base'>{props.products[props.id].short_description}</p>
+                        <ul className='w-[30rem] text-xl mt-5 gap-2 flex flex-col max-[1030px]:w-[23rem] max-[769px]:w-[16rem] max-[426px]:mb-[23rem] max-[426px]:text-base'>
                             <li>Developed by : {props.products[props.id].developer}</li>
                             <li>Release date : {props.products[props.id].release_date}</li>
                             <li>Platform : {props.products[props.id].platform}</li>

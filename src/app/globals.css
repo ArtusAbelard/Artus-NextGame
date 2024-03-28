@@ -8,6 +8,20 @@
 #6F86A7
 #ECE6CE */
 
+/* #3F3F3F */
+@font-face {
+  font-family: 'CustomFont'; /* Name your font family */
+  src: url('../fonts/GothamRnd-Medium.otf'); /* Locate the .ttf file within your directory*/
+}
+@font-face {
+  font-family: 'CustomFontLight'; /* Name your font family */
+  src: url('../fonts/GothamRnd-Light.otf'); /* Locate the .ttf file within your directory*/
+}
+
+*{
+  font-family: CustomFontLight !important; 
+}
+
 .box {
     width: 140px;
     height: auto;
@@ -99,9 +113,9 @@
   }
   .bglogin{
     background-image: url(../../public/img/theorieEuclidienne.png);
-    background-position: -40px -80px;
+    background-position: -40px -20px;
     background-size: 115%;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat ;
     
   }
  

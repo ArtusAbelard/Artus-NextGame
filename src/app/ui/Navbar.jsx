@@ -38,10 +38,10 @@ export default function Navbar(props) {
             </div>
             <div className="navbar-end min-[1440px]:me-5">        
                 <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black">Log in</div>
+                    <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black ">Log in</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
-                           <Link href={'/connexion'}><li className='hover:text-[#E08821] ps-3 pt-2'>Log in</li></Link>
-                           <Link href={'/inscription'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
+                           <Link href={'/connexion'}><li className='hover:text-[#E08821]  ps-3 pt-2'>Log in</li></Link>
+                           <Link href={'/registration'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
                         </ul>
                     </div>
                 <div className="flex-none">
