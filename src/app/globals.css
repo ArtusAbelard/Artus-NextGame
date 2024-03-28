@@ -11,11 +11,11 @@
 /* #3F3F3F */
 @font-face {
   font-family: 'CustomFont'; /* Name your font family */
-  src: url('../fonts/GothamRnd-Medium.otf'); /* Locate the .ttf file within your directory*/
+  src: url('../app/ui/fonts/GothamRnd-Medium.otf'); /* Locate the .ttf file within your directory*/
 }
 @font-face {
   font-family: 'CustomFontLight'; /* Name your font family */
-  src: url('../fonts/GothamRnd-Light.otf'); /* Locate the .ttf file within your directory*/
+  src: url('../app/ui/fonts/GothamRnd-Light.otf'); /* Locate the .ttf file within your directory*/
 }
 
 *{
