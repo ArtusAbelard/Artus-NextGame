@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #0D1220
-#1C2A42
-#3C5772
-#6F86A7
-#ECE6CE */
-
-/* #3F3F3F */
 @font-face {
   font-family: 'CustomFont'; /* Name your font family */
   src: url('../app/ui/fonts/GothamRnd-Medium.otf'); /* Locate the .ttf file within your directory*/
