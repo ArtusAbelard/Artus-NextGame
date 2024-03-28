@@ -1,9 +1,7 @@
 'use client';
 
-import logo from '../../../public/img/Geek-World.png'
 import logoremove from '../../../public/img/Geek-World-removebg-preview.png'
 import React from 'react'
-import darkmode from '../../../public/img/pngtree.jpg'
 import Link from 'next/link'
 import { useSelector, useDispatch } from "react-redux"
 import { colorset } from '@/store/darkmod';
@@ -11,10 +9,9 @@ import Image from 'next/image';
 
 
 export default function Navbar(props) {
-
     const color = useSelector((state) => state.color)
     const dispatch = useDispatch();
-    
+
     return (
         <div className={` navbar z-50 h-[6rem] bg-[#0E0E0E] ${color.actual==true?"invert":""}`}>
             <div className="navbar-start">
@@ -28,28 +25,18 @@ export default function Navbar(props) {
                     <li className='hover:text-[#E08821]'><Link href='/favoris'>Favoris</Link></li>
                 </ul>
                 </div>
-                
-                <Image
-                className='w-[12rem] h-[4rem]'
-                alt=""
-                src={logoremove}
-                ></Image>
+                <Image className='w-[12rem] max-[425px]:w-[10rem] h-[4rem]' alt="" src={logoremove}></Image>
                 {/* <a className="btn btn-ghost text-2xl invert ">GeekWorld</a> */}
                 <img onClick={()=>{dispatch(colorset(!color.actual))}} className='h-8 w-8 me-3 cursor-pointer invert' src='https://static.thenounproject.com/png/4066357-200.png' alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="text-xl menu menu-horizontal text-[#ECE6CE] px-1">
-                    <li><button><span className={`box  ${color.actual==true?"text-white":"invert"}`}><Link href='/'>Home</Link></span></button></li>
-                    <li><button><span className={`box ${color.actual==true?"text-white":"invert"}`}><Link href='/produits'>Produits</Link></span></button></li>
-                    <li><button><span className={`box ${color.actual==true?"text-white":"invert"}`}><Link href='/favoris'>Favoris</Link></span></button></li>
-                    {/* <li className='hover:text-[#E08821]'><Link href='/'>Home</Link></li>
-                    <li className='hover:text-[#E08821]'><Link href='/produits'>Produits</Link></li>
-                    <li className='hover:text-[#E08821]'><Link href='/favoris'>Favoris</Link></li> */}
+                    <li><Link href='/'><button><span className={`box  ${color.actual==true?"text-white":"invert"}`}>Home</span></button></Link></li>
+                    <li><Link href='/produits'><button><span className={`box ${color.actual==true?"text-white":"invert"}`}>Produits</span></button></Link></li>
+                    <li><Link href='/favoris'><button><span className={`box ${color.actual==true?"text-white":"invert"}`}>Favoris</span></button></Link></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-            {/* invert */}
-                
+            <div className="navbar-end">        
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0">Conexion</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
