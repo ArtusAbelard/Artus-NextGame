@@ -9,7 +9,6 @@ export default function Page() {
     
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col ">
-          
             <Navbar></Navbar> 
             <div className={`w-screen min-h-[895px]  flex items-center justify-center bg-[#1e1e1e] ${color.actual==true?"invert":""} max-[426px]:h-[100px]`}>
             <div className="w-[30rem]  h-[40rem] rounded-xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-5 bglogin max-[426px]:w-[22rem] max-[426px]:h-[32rem]">
