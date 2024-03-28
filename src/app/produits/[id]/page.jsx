@@ -1,5 +1,5 @@
-import Navbar from "@/app/ui/Navbar";
-import Details from "@/app/ui/Details";
+import Navbar from "../../ui/Navbar";
+import Details from "../../ui/Details";
 
 async function getProduct(){
     const res = await fetch('https://www.freetogame.com/api/games')

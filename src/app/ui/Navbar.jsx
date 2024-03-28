@@ -4,7 +4,7 @@ import logoremove from '../../../public/img/Geek-Hub-removebg-preview.png'
 import React from 'react'
 import Link from 'next/link'
 import { useSelector, useDispatch } from "react-redux"
-import { colorset } from '@/store/darkmod';
+import { colorset } from '../../store/darkmod';
 import Image from 'next/image';
 import star from '../../../public/img/favoris.png'
 

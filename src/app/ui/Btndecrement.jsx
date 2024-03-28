@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useDispatch,useSelector } from "react-redux";
-import { increment,decrement } from "@/store/slice";
+import { increment,decrement } from "../../store/slice";
 
 export default function Btndecrement(props) {
     const dispatch = useDispatch()
