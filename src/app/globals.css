@@ -97,4 +97,11 @@
   .navshadow{
     box-shadow: rgb(224, 136, 33) 0px 20px 30px -10px;
   }
+  .bglogin{
+    background-image: url(../../public/img/theorieEuclidienne.png);
+    background-position: -40px -80px;
+    background-size: 115%;
+    background-repeat: no-repeat;
+    
+  }
  
