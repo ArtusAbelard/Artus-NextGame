@@ -11,6 +11,8 @@ export default async function Page() {
     
     // const products = await new Promise((getProduct) => setTimeout(getProduct, 30000));
     const products = await getProduct()
+
+   
     
     return(
     <div className="min-w-screen  min-h-screen flex  items-center flex-col">
