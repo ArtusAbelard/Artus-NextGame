@@ -34,11 +34,6 @@ export default function Page() {
       
     }
 
-    console.log(login.status);
-
-    
-      
-      
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col ">
             <Navbar></Navbar> 
