@@ -1,5 +1,6 @@
 'use client';
 
+import gitteub from '../../../public/img/Git-Teub-removebg.png'
 import logoremove from '../../../public/img/Geek-Hub-removebg-preview.png'
 import React from 'react'
 import Link from 'next/link'
@@ -25,7 +26,8 @@ export default function Navbar(props) {
                     <li className='hover:text-[#E08821]'><Link href='/favoris'>Saved</Link></li>
                 </ul>
                 </div>
-                <Image className='w-[12rem] max-[425px]:w-[10rem] h-[4rem]' alt="" src={logoremove}></Image>
+                <Image className='w-[12rem] max-[425px]:w-[10rem] h-[5rem]' alt="" src={gitteub}></Image>
+                {/* <Image className='w-[12rem] max-[425px]:w-[10rem] h-[4rem]' alt="" src={logoremove}></Image> */}
                 {/* <a className="btn btn-ghost text-2xl invert ">GeekWorld</a> */}
                 <img onClick={()=>{dispatch(colorset(!color.actual))}} className='h-8 w-8 me-3 cursor-pointer invert ' src='https://static.thenounproject.com/png/4066357-200.png' alt="" />
             </div>

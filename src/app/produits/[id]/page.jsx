@@ -8,7 +8,7 @@ async function getProduct(){
 
 export default async function Product({params}) {
     const products = await getProduct()
-
+    
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>

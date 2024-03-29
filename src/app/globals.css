@@ -110,5 +110,11 @@
     background-size: 115%;
     background-repeat:no-repeat ;
     
+    
+  }
+  .bglog{
+    background-image: url(../../public/img/circuit.png);
+    background-position:  center;
+    
   }
  
