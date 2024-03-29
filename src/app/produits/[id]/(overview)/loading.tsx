@@ -6,7 +6,6 @@ export default function Loading() {
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>
             <Detailskeleton></Detailskeleton>
-            
         </div>
     )
 }

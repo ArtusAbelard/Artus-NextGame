@@ -7,12 +7,10 @@ import { addToLib } from '../../store/slice'
 
 export default function Card({products}) {
     const color = useSelector((state) => state.color)
-    console.log(color.actual);
-
+    
     const dispatch = useDispatch();
     dispatch(addToLib(products));
     const lib = useSelector(state => state.counter.lib)
-    console.log(lib);
     
     return (
         <div className={`pt-16 flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>

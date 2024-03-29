@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux"
 export default function Page() {
     const color = useSelector((state) => state.color)
     const dispatch = useDispatch();
-
+    
     return(
         <div className="min-w-screen  min-h-screen flex items-center flex-col ">
             <Navbar></Navbar> 

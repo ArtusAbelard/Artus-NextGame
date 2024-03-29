@@ -5,8 +5,7 @@ import { useSelector} from "react-redux"
 
 export default function Details(props) {
     const color = useSelector((state) => state.color)
-    console.log(props.products[0]);
-    console.log(props.id);
+    
     return (
         <div className={`pt-16 w-[100%] min-h-[895px] flex bg-[#1e1e1e] justify-center items-center flex-wrap gap-10 bgdetail max-[426px]:pt-0  ${color.actual==true?"invert":""}`}>
             <div className='w-[65rem] h-[40rem] rounded-3xl flex flex-col items-center justify-center bg-[#0E0E0E] boxshadow max-[1024px]:w-[50rem] max-[769px]:w-[40rem] max-[426px]:h-[40rem] max-[426px]:w-[20rem]  '>
