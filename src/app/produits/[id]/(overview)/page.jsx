@@ -1,5 +1,6 @@
-import Navbar from "../../ui/Navbar";
-import Details from "../../ui/Details";
+import Navbar from "../../../ui/Navbar";
+import Details from "../../../ui/Details";
+import Detailskeleton from "../../../ui/skeleton/Detailskeleton";
 
 async function getProduct(){
     const res = await fetch('https://www.freetogame.com/api/games')
@@ -13,6 +14,7 @@ export default async function Product({params}) {
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>
             <Details id={params.id} products={products}></Details>
+            {/* <Detailskeleton></Detailskeleton> */}
         </div>
     )
 

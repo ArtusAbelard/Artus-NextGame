@@ -8,8 +8,7 @@ export default function Page() {
     const dispatch = useDispatch();
 
     return(
-        <div className="min-w-screen  min-h-screen flex  items-center flex-col ">
-
+        <div className="min-w-screen  min-h-screen flex items-center flex-col ">
             <Navbar></Navbar> 
             <div className={`w-screen min-h-[895px]  flex items-center justify-center bg-[#1e1e1e] bglog max-[426px]:min-h-[750px] ${color.actual==true?"invert":""}`}>
             <div className="w-[30rem]  h-[35rem] rounded-xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-5 bglogin boxshadow max-[426px]:w-[22rem] max-[426px]:h-[30rem]">
@@ -30,6 +29,5 @@ export default function Page() {
                 </div>
             </div>
         </div>
-
     )
 }

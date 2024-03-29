@@ -1,6 +1,6 @@
 
 
-import Gameskeleton from '../ui/skeleton/Gameskeleton'
+import Gameskeleton from '../../ui/skeleton/Gameskeleton'
 
 export default function Loading() {
     return (
