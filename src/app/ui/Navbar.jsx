@@ -34,7 +34,7 @@ export default function Navbar() {
                 {/* <Image className='w-[12rem] max-[425px]:w-[10rem] h-[5rem]' alt="" src={gitteub}></Image> */}
                 {/* <Image className='w-[12rem] max-[425px]:w-[10rem] h-[4rem]' alt="" src={logoremove}></Image> */}
                 {
-                    state==false?<a onClick={()=>{setstate(!state)}} className="btn btn-ghost min-text-3xl text-3xl invert ">GeekWorld</a>:<Image onClick={()=>{setstate(!state)}} className='w-[12rem] max-[425px]:w-[10rem] h-[5rem]' alt="" src={gitteub}></Image>
+                    state==false?<a onClick={()=>{setstate(!state)}} className="btn btn-ghost min-text-3xl text-3xl invert text-black">GeekWorld</a>:<Image onClick={()=>{setstate(!state)}} className='w-[12rem] max-[425px]:w-[10rem] h-[5rem]' alt="" src={gitteub}></Image>
                 }
                 {/* <a className="btn btn-ghost text-2xl invert ">GeekWorld</a> */}
                 <img onClick={()=>{dispatch(colorset(!color.actual))}} className='h-8 w-8 me-3 cursor-pointer invert ' src='https://static.thenounproject.com/png/4066357-200.png' alt="" />
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <div className="dropdown dropdown-end ">
                    {
                      login.status==true?<div onClick={()=>{dispatch(logintru(!login.status))}} tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log out</div>:
-                     <div><div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log in</div>
+                     <div><div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white font-bold">Log in</div>
                      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
                         <Link href={'/connexion'}><li className='hover:text-[#E08821]  ps-3 pt-2'>Log in</li></Link>
                         <Link href={'/registration'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
