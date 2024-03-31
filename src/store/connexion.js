@@ -5,7 +5,7 @@ export const connexion = createSlice({
   initialState: {
     name:["tribelha","artus"],
     password:["guest","admin"],
-    
+    status:false,
   },
   
   reducers: {
@@ -19,9 +19,12 @@ export const connexion = createSlice({
     registermdp: (state, action) => {
       state.password.push(action.payload)
     },
+    logintru: (state, action) => {
+      state.status = action.payload
+    },
   },
 })
 
-export const { verify, registername, registermdp} = connexion.actions
+export const { verify, registername, registermdp, logintru} = connexion.actions
 
 export default connexion.reducer

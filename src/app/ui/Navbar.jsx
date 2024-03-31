@@ -8,14 +8,17 @@ import { useSelector, useDispatch } from "react-redux"
 import { colorset } from '../../store/darkmod';
 import Image from 'next/image';
 import star from '../../../public/img/favoris.png'
-import { logintru } from '../../store/login';
+import { logintru } from '../../store/connexion';
+// import { logintru } from '../../store/login';
 
 
 export default function Navbar() {
     const color = useSelector((state) => state.color)
-    const login = useSelector((state) => state.login)
+    // const login = useSelector((state) => state.login)
+    const connexion = useSelector((state) => state.connect)
     const dispatch = useDispatch();
     const [state, setstate] = useState(true)
+    
     
 
     return (
@@ -49,7 +52,7 @@ export default function Navbar() {
             <div className="navbar-end min-[1440px]:me-5">        
                 <div className="dropdown dropdown-end ">
                    {
-                     login.status==true?<div onClick={()=>{dispatch(logintru(!login.status))}} tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log out</div>:
+                     connexion.status==true?<div onClick={()=>{dispatch(logintru(!connexion.status))}} tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log out</div>:
                      <div><div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white font-bold">Log in</div>
                      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
                         <Link href={'/connexion'}><li className='hover:text-[#E08821]  ps-3 pt-2'>Log in</li></Link>
