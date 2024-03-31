@@ -11,20 +11,21 @@ export default function Gameskeleton(props) {
     return (
         <div className="min-w-screen  min-h-screen flex items-center flex-col">
         <Navbar></Navbar>
-       
-        <div className={`pt-16 flex  justify-center items-center bg-[#1e1e1e] flex-wrap gap-10 min-h-[55.9rem] bgnoborder  ${color.actual==true?"invert ":""}`}>
-        {
-            skeleton.map((Element,id)=>{
-                return(
-                    <div className="flex flex-col gap-4 w-96 h-[20rem] invert">
-                        <div className="skeleton h-[12rem] w-full"></div>
-                        <div className="skeleton h-[2rem] w-full"></div>
-                        <div className="skeleton h-[2rem] w-full"></div>
-                        <div className="skeleton h-[3rem] w-28 ms-[17rem]"></div>
-                    </div>
-                )
-            })
-        }
+        <div className={`pt-16 flex  justify-center items-center bg-[#1e1e1e] flex-wrap gap-10 min-h-[55.9rem] bgnoborder  ${color.actual==true?"invert":""}`}>
+            <div className='invert flex flex-wrap gap-10 min-h-[55.9rem] justify-center items-center'>
+                {
+                    skeleton.map((Element,id)=>{
+                        return(
+                            <div className="flex flex-col gap-4 w-96 h-[20rem] invert">
+                                <div className="skeleton h-[12rem] w-full"></div>
+                                <div className="skeleton h-[2rem] w-full"></div>
+                                <div className="skeleton h-[2rem] w-full"></div>
+                                <div className="skeleton h-[3rem] w-28 ms-[17rem]"></div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
         </div>
     )
