@@ -122,4 +122,9 @@
     background-position:  center;
     
   }
+  .bghome{
+    background-image: url(./../../public/img/bluecircuit.png);
+    background-position: top;
+    background-size: 110%;
+  }
  

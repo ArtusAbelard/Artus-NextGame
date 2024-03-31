@@ -54,12 +54,6 @@ export default function Navbar() {
                         <Link href={'/registration'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
                      </ul>  </div>
                    }
-                   {/* <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log in</div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
-                           <Link href={'/connexion'}><li className='hover:text-[#E08821]  ps-3 pt-2'>Log in</li></Link>
-                           <Link href={'/registration'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
-                        </ul>
-                     */}
                 </div>
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">
@@ -70,21 +64,11 @@ export default function Navbar() {
                         <span className="badge badge-sm indicator-item ">0</span>
                         </div>
                     </div>
-
-                    
-
                     <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"":"hidden"}`}>
                         <div className="card-body">
-                        <span className="font-bold text-lg text-white">You need to be logged for that !</span>
-                        {/* <span className=" text-[#E08821]">Subtotal: $999</span> */}
-                        {/* <div className="card-actions">
-                            <button className="btn bg-[#E08821] border-0 btn-block text-black hover:text-white">View cart</button>
-                        </div> */}
+                        <span className="font-bold text-base text-white">You need to be logged for that !</span>
                         </div>
                     </div>
-
-                    
-
                     <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"hidden":""}`}>
                         <div className="card-body">
                         <span className="font-bold text-lg text-white">0 Items</span>
@@ -94,9 +78,6 @@ export default function Navbar() {
                         </div>
                         </div>
                     </div>
-                    
-
-
                     </div>
                 </div>
             </div>

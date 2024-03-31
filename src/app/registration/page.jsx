@@ -21,7 +21,7 @@ export default function Page() {
         dispatch(registermdp(mdp))
         setTimeout(() => {
             router.push('/connexion')  
-          }, 1300);
+          }, 1);
     }
     
     return(
