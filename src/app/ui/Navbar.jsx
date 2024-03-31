@@ -9,18 +9,13 @@ import { colorset } from '../../store/darkmod';
 import Image from 'next/image';
 import star from '../../../public/img/favoris.png'
 import { logintru } from '../../store/connexion';
-// import { logintru } from '../../store/login';
-
 
 export default function Navbar() {
     const color = useSelector((state) => state.color)
-    // const login = useSelector((state) => state.login)
     const connexion = useSelector((state) => state.connect)
     const dispatch = useDispatch();
     const [state, setstate] = useState(true)
     
-    
-
     return (
         <div className={` navbar z-50 h-[6rem] navshadow bg-[#0E0E0E] ${color.actual==true?"invert":""}`}>
             <div className="navbar-start min-[1440px]:ms-5">
@@ -58,7 +53,6 @@ export default function Navbar() {
                         <Link href={'/connexion'}><li className='hover:text-[#E08821]  ps-3 pt-2'>Log in</li></Link>
                         <Link href={'/registration'}><li className='hover:text-[#E08821] ps-3 pt-2 pb-2'>Registration</li></Link>
                      </ul>  </div>
-                     
                    }
                    {/* <div tabIndex={0} role="button" className="btn m-1 bg-[#E08821] border-0 text-black hover:text-white">Log in</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#0E0E0E] text-white border-[1px] rounded-box w-52">
@@ -73,18 +67,36 @@ export default function Navbar() {
                         <div className="indicator">
                         {/* <svg xmlns="http://www.w3.org/2000/svg" className="invert h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg> */}
                         <Image className='invert h-[1.5rem] w-[1.5rem] mt-1  ease-in duration-100 hover:w-[2rem] hover:h-[2rem] ' alt=""  src={star}></Image>
-                        <span className="badge badge-sm indicator-item ">8</span>
+                        <span className="badge badge-sm indicator-item ">0</span>
                         </div>
                     </div>
-                    <div tabIndex={0} className="mt-3 z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow">
+
+                    
+
+                    <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"":"hidden"}`}>
                         <div className="card-body">
-                        <span className="font-bold text-lg text-white">8 Items</span>
+                        <span className="font-bold text-lg text-white">You need to be logged for that !</span>
+                        {/* <span className=" text-[#E08821]">Subtotal: $999</span> */}
+                        {/* <div className="card-actions">
+                            <button className="btn bg-[#E08821] border-0 btn-block text-black hover:text-white">View cart</button>
+                        </div> */}
+                        </div>
+                    </div>
+
+                    
+
+                    <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"hidden":""}`}>
+                        <div className="card-body">
+                        <span className="font-bold text-lg text-white">0 Items</span>
                         <span className=" text-[#E08821]">Subtotal: $999</span>
                         <div className="card-actions">
-                            <button className="btn bg-[#E08821] border-0 btn-block">View cart</button>
+                            <button className="btn bg-[#E08821] border-0 btn-block text-black hover:text-white">View cart</button>
                         </div>
                         </div>
                     </div>
+                    
+
+
                     </div>
                 </div>
             </div>

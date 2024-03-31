@@ -32,7 +32,7 @@ export default function Details(props) {
                         <h4 className='text-white font-medium max-[769px]:w-[14rem]'>Publish by : {props.products[props.id].publisher}</h4>
                     </div>
                     <div className='h-full w-1/2 flex items-center justify-center max-[426px]:w-full max-[426px]:mt-[15rem]'>
-                    <a href={props.products[props.id].freetogame_profile_url}> <button className="btn bg-[#E08821] text-black border-0"><p className='w-full text-center font-bold text-xl '>PLAY THE GAME </p></button></a>
+                    <a href={props.products[props.id].freetogame_profile_url}> <button className="btn hover:text-white bg-[#E08821] text-black border-0"><p className='w-full text-center font-bold text-xl '>PLAY THE GAME </p></button></a>
                     </div>
                  </div>
             </div>  
