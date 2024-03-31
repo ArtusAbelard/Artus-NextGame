@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import check from "../../../public/img/check.png"
 import { useRouter } from "next/navigation";
-import { logintru } from "../../store/login";
 
 export default function Page() {
     const router = useRouter()
@@ -14,26 +13,21 @@ export default function Page() {
     const connexion = useSelector((state) => state.connect)
     const login = useSelector((state) => state.login)
     const dispatch = useDispatch();
-    const [conected, setconected] = useState(login.status)
     const [name, setname] = useState("")
     const [mdp, setmdp] = useState("")
     
     function conect() {
-      if (connexion.name==name && connexion.password==mdp) {
-        // setconected(true)
-        // useDispatch(logintru(conected))
-        setTimeout(() => {
-          router.push('/')  
-        }, 1300);
-        
-      } else {
-        // setconected(false)
-        // useDispatch(logintru(conected))
-     
+      for (let i = 0; i < connexion.name.length; i++) {
+        if (connexion.name[i]==name && connexion.password[i]==mdp) {
+          setTimeout(() => {
+            router.push('/')  
+          }, 1300);
+          dispatch(logintru(!login.status))
+        }
       }
-      
     }
-
+    console.log(connexion.name);
+    console.log(connexion.password);
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col ">
             <Navbar></Navbar> 
@@ -49,8 +43,9 @@ export default function Page() {
                 <input type="password" className="grow"  onChange={(e) => {setmdp(e.target.value)}}/>*
                 {/* onKeyDown={()=>{dispatch(logintru(!login.status))}} */}
                 </label>
-                <button onClick={()=>{dispatch(logintru(!login.status)),conect()}}  className="btn text-xl bg-[#E08821] text-black hover:text-white">Connect</button>
+                <button onClick={()=>{dispatch(conect())}} className="btn text-xl bg-[#E08821] text-black hover:text-white">Connect</button>
             </div>
+
 
             <div className={`w-[30rem]  h-[30rem] rounded-xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-5 bglogin boxshadow max-[426px]:w-[22rem] max-[426px]:h-[30rem] ${login.status==true?"":"hidden"}`}>
               <div className="w-[20rem] h-[20rem] rounded-full border-white border-[7px] flex items-center justify-center">
