@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import Sliderhome from './sliderhome'
+import Sliderhome from './Sliderhome'
 
 export default function Homepage({products}) {
 
