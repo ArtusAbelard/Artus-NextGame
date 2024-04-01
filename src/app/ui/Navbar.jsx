@@ -64,7 +64,7 @@ export default function Navbar() {
                         <span className="badge badge-sm indicator-item ">0</span>
                         </div>
                     </div>
-                    <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"":"hidden"}`}>
+                    <div tabIndex={0} className={`mt-3 z-50 border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow  ${!connexion.status?"":"hidden"}`}>
                         <div className="card-body">
                         <span className="font-bold text-base text-white">You need to be logged for that !</span>
                         </div>
