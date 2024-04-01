@@ -1,19 +1,23 @@
-import React from 'react'
 
-export default function Homepage(props) {
-    
+
+import React from 'react'
+import Sliderhome from './sliderhome'
+
+export default function Homepage({products}) {
+
+   
 
     return (
-        <div className='w-screen h-[55.9rem] flex flex-col justify-center items-center'>
-            <div className='w-screen h-[20rem] flex items-center justify-center'>
-                <div className='w-[103rem] h-[18rem] bg-slate-400 rounded-xl'>
+        <div>
+            <Sliderhome products={products}></Sliderhome>
+            
+            <div className='w-screen pt-[5rem] h-[33rem]  flex justify-center gap-10 items-center'>
+                <div className='w-[51rem] h-[35rem] bg-slate-400 rounded-xl'></div>
+                <div className='w-[51rem] h-[35rem] bg-slate-400 rounded-xl'></div>
+            </div>
 
-                </div>
-            </div>
-            <div className='w-screen h-[33rem]  flex justify-center gap-6 items-center'>
-                <div className='w-[51rem] h-[33rem] bg-slate-400 rounded-xl'></div>
-                <div className='w-[51rem] h-[33rem] bg-slate-400 rounded-xl'></div>
-            </div>
-        </div>
+</div>
+            
+       
     )
 }

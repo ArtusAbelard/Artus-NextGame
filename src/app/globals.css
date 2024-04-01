@@ -127,4 +127,33 @@
     background-position: top;
     background-size: 110%;
   }
- 
+
+  /* carousel  */
+  @keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-250px*8));
+  }
+  }
+
+  .slider{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+  }
+  .slide-track{
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px*16);
+  }
+  .slide{
+    height: 200px;
+    width: 250px;
+    
+
+  
+  }
+  

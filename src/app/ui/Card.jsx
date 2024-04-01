@@ -11,6 +11,7 @@ export default function Card({products}) {
     const dispatch = useDispatch();
     dispatch(addToLib(products));
     const lib = useSelector(state => state.counter.lib)
+   
     
     return (
         <div className={`pt-16 flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
