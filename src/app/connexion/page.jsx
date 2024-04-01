@@ -26,7 +26,6 @@ export default function Page() {
         }
       }
     }
-
     console.log(connexion.name);
     console.log(connexion.password);
     return(
