@@ -143,18 +143,18 @@
     overflow: hidden;
     /* position: relative; */
     padding-top: 10px;
-    z-index: 0;
+    
   }
   .slide-track{
     animation: scroll 40s linear infinite;
     display: flex;
     width: calc(250px*16);
-    z-index: 0;
+    
   }
   .slide{
     height: 200px;
     width: 250px;
-    z-index: 0;
+    
     
 
   

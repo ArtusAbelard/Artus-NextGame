@@ -9,17 +9,15 @@ export default function Sliderhome({products}) {
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
-    console.log(getRandomInt(395));  
-    let imgrandom = [] 
-    
+    let imgrandom = []
     for (let i = 0; i < 8; i++) {
         imgrandom.push(getRandomInt(395))
     }
     
     return (
-        <div className='slider'>
-                <div className='slide-track z-0'>
-                    <div className='slide'>
+        <div className='slider z-0'>
+                <div className='slide-track'>
+                    <div className='slide '>
                         <img src={products[imgrandom[0]].thumbnail} alt="" />
                     </div>
                     <div className='slide'>
