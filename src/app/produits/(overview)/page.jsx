@@ -15,6 +15,11 @@ export default async function Page() {
     return(
     <div className="min-w-screen  min-h-screen flex  items-center flex-col">
         <Navbar></Navbar>
+        <div className="w-full bg-black h-[10rem] flex items-center justify-center">
+
+            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+
+        </div>
         <Card products={products}></Card>
         {/* <Gameskeleton></Gameskeleton> */}
     </div>

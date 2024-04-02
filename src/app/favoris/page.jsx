@@ -1,6 +1,12 @@
+import Navbar from "../ui/Navbar"
+
 export default async function Page() {
 
     return(
-        <h1>ewaaaa</h1>
+
+       <div>
+         <Navbar></Navbar>
+         
+       </div>
     )
 }
