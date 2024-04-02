@@ -27,7 +27,7 @@ export default function Page() {
     return(
         <div className="min-w-screen  min-h-screen flex items-center flex-col ">
             <Navbar></Navbar> 
-            <div className={`w-screen min-h-[895px]  flex items-center justify-center bg-[#1e1e1e] bglog max-[426px]:min-h-[750px] ${color.actual==true?"invert":""}`}>
+            <div className={`w-screen min-h-[895px] mt-[6rem] flex items-center justify-center bg-[#1e1e1e] bglog max-[426px]:min-h-[750px] ${color.actual==true?"invert":""}`}>
             <div className={`w-[30rem]  h-[30rem] rounded-xl bg-[#0E0E0E] flex flex-col items-center justify-center gap-5 bglogin boxshadowlog max-[426px]:w-[22rem] max-[426px]:h-[30rem] ${connexion.status==true?"hidden":""}`}>
                 <h1 className="text-white text-2xl font-bold">Registration :</h1>
                 {/* <label className="input input-bordered bg-black border-[1px] border-white text-white flex items-center gap-2 w-[25rem] max-[426px]:w-[18rem]">
