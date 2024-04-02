@@ -1,36 +1,43 @@
+"use client"
 
 import React from 'react'
 import Sliderhome from './Sliderhome'
+import { useSelector, useDispatch } from "react-redux"
 
-export default function Homepage({products}) {  
+export default function Homepage({products}) { 
+    const color = useSelector((state) => state.color) 
 
     function getClosestDate(dates, referenceDate) {
         // Convertir les dates en objets Date
         const referenceDateObj = new Date(referenceDate);
         const datesObj = dates.map(date => new Date(date));
-      
         // Calculer la différence en millisecondes entre chaque date et la date de référence
         const timeDiffs = datesObj.map(date => Math.abs(date - referenceDateObj));
-      
         // Trouver l'index de la date avec la différence minimale
         const minIndex = timeDiffs.indexOf(Math.min(...timeDiffs));
-      
         // Retourner la date la plus proche
         return dates[minIndex];
       }
-
-
         const dates = ["2020-10-15", "2020-10-12", "2020-10-18", "2020-10-10"];
-        const referenceDate = "2020-10-14";
-
+        
+        let now = new Date();
+        console.log(now);
+        let monthactual = now.getMonth()+1
+        let actual = now.getFullYear()+"-"+monthactual+"-"+now.getDate()
+        const referenceDate = actual;
         const closestDate = getClosestDate(dates, referenceDate);
 
-        console.log(closestDate); // "2020-10-15"
+        // console.log(closestDate); 
+        // console.log(products[0].release_date);
 
-    // console.log(products);
+        // const result = products.filter((products) => products.release_date);
+
+        console.log(color.actual);
+
+    
     return (
-        <div className='z-0'>
-            <Sliderhome products={products}></Sliderhome>
+        <div className={` h-[42.4rem] z-0 ${color.actual==true?"invert ":""}`}>
+            {/* <Sliderhome products={products}></Sliderhome> */}
             <div className='w-screen pt-[8rem] h-[33rem]  flex justify-center gap-[5rem] items-center'>
                 <div className='w-[40rem] h-[35rem] rounded-xl'>
                 <h1 className='text-white w-full text-center text-3xl font-bold pb-7'>Last release :</h1>
@@ -67,7 +74,9 @@ export default function Homepage({products}) {
                 </div>
                 <div className='w-[40rem] h-[35rem] bg-slate-400 rounded-xl'>   
                 </div>
+                
             </div>
+            {/* <Sliderhome products={products}></Sliderhome> */}
         </div>
             
        

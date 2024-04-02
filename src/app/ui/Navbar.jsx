@@ -17,8 +17,8 @@ export default function Navbar() {
     const [state, setstate] = useState(true)
     
     return (
-        <div className={` navbar z-50 h-[6rem] navshadow bg-[#0E0E0E] ${color.actual==true?"invert":""}`}>
-            <div className="navbar-start min-[1440px]:ms-5">
+        <div className={`navbar z-50 h-[8rem] navshadow bg-[#0E0E0E] absolute  ${color.actual==true?"invert ":""}`}>
+            <div className="navbar-start min-[1440px]:ms-5 ">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 invert" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </div>
                     <div tabIndex={0} className={`mt-3 z-50 border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow  ${!connexion.status?"":"hidden"}`}>
                         <div className="card-body">
-                        <span className="font-bold text-base text-white">You need to be logged for that !</span>
+                        <span className="font-bold text-base text-white ">You need to be logged for that !</span>
                         </div>
                     </div>
                     <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"hidden":""}`}>
