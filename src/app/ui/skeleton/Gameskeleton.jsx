@@ -11,7 +11,7 @@ export default function Gameskeleton(props) {
     return (
         <div className="min-w-screen  min-h-screen flex items-center flex-col">
         <Navbar></Navbar>
-        <div className={`pt-16 flex  justify-center items-center bg-[#1e1e1e] flex-wrap gap-10 min-h-[55.9rem] bgnoborder  ${color.actual==true?"invert":""}`}>
+        <div className={` flex pt-[9rem] overflow-hidden justify-center items-center bg-[#1e1e1e] flex-wrap gap-10 min-h-[55.9rem] bgnoborder  ${color.actual==true?"invert":""}`}>
             <div className='invert flex flex-wrap gap-10 min-h-[55.9rem] justify-center items-center'>
                 {
                     skeleton.map((Element,id)=>{

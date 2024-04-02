@@ -29,7 +29,6 @@ export default function Homepage({products}) {
 
         // console.log(closestDate); 
         // console.log(products[0].release_date);
-
         // const result = products.filter((products) => products.release_date);
 
         console.log(color.actual);
@@ -37,34 +36,36 @@ export default function Homepage({products}) {
     
     return (
         <div className={` h-[42.4rem] z-0 ${color.actual==true?"invert ":""}`}>
-            {/* <Sliderhome products={products}></Sliderhome> */}
-            <div className='w-screen pt-[8rem] h-[33rem]  flex justify-center gap-[5rem] items-center'>
+          
+            <div className='w-screen pt-[8rem] h-[33rem]  flex justify-center gap-[5rem] items-center '>
                 <div className='w-[40rem] h-[35rem] rounded-xl'>
-                <h1 className='text-white w-full text-center text-3xl font-bold pb-7'>Last release :</h1>
+                
+                    <h1 className={`text-white h-[4rem]  text-3xl font-bold pb-7 ${color.actual==true?"invert ":""}`}>Most Popular :</h1>
+               
                 <div className="carousel h-[25rem] w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://www.freetogame.com/g/540/thumbnail.jpg" className="w-full" />
+                    <img src="https://www.freetogame.com/g/540/thumbnail.jpg" className="w-full rounded-xl" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-circle">❮</a> 
                     <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div> 
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://www.freetogame.com/g/521/thumbnail.jpg" className="w-full" />
+                    <img src="https://www.freetogame.com/g/13/thumbnail.jpg" className="w-full rounded-xl" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a> 
                     <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div> 
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://www.freetogame.com/g/517/thumbnail.jpg" className="w-full" />
+                    <img src="https://www.freetogame.com/g/517/thumbnail.jpg" className="w-full rounded-xl" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a> 
                     <a href="#slide4" className="btn btn-circle">❯</a>
                     </div>
                 </div> 
                 <div id="slide4" className="carousel-item relative w-full">
-                    <img src="https://www.freetogame.com/g/516/thumbnail.jpg" className="w-full" />
+                    <img src="https://www.freetogame.com/g/516/thumbnail.jpg" className="w-full rounded-xl" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a> 
                     <a href="#slide1" className="btn btn-circle">❯</a>
@@ -72,11 +73,51 @@ export default function Homepage({products}) {
                 </div>
                 </div>
                 </div>
-                <div className='w-[40rem] h-[35rem] bg-slate-400 rounded-xl'>   
+                <div className='w-[40rem] h-[35rem]  rounded-xl'>   
+
+
+                <div className='w-[40rem] h-[35rem] rounded-xl'>
+                
+                <h1 className={`text-white h-[4rem]  text-3xl font-bold pb-7 ${color.actual==true?"invert ":""}`}>Last Release :</h1>
+           
+            <div className="carousel h-[25rem] w-full">
+            <div id="slide6" className="carousel-item relative w-full">
+                <img src="https://www.freetogame.com/g/575/thumbnail.jpg" className="w-full rounded-xl" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide9" className="btn btn-circle">❮</a> 
+                <a href="#slide7" className="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide7" className="carousel-item relative w-full">
+                <img src="https://www.freetogame.com/g/576/thumbnail.jpg" className="w-full rounded-xl" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide6" className="btn btn-circle">❮</a> 
+                <a href="#slide9" className="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide9" className="carousel-item relative w-full">
+                <img src="https://www.freetogame.com/g/579/thumbnail.jpg" className="w-full rounded-xl" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide7" className="btn btn-circle">❮</a> 
+                <a href="#slide10" className="btn btn-circle">❯</a>
+                </div>
+            </div> 
+            <div id="slide10" className="carousel-item relative w-full">
+                <img src="https://www.freetogame.com/g/572/thumbnail.jpg" className="w-full rounded-xl" />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide9" className="btn btn-circle">❮</a> 
+                <a href="#slide6" className="btn btn-circle">❯</a>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+
                 </div>
                 
             </div>
-            {/* <Sliderhome products={products}></Sliderhome> */}
+           
         </div>
             
        
