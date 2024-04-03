@@ -13,6 +13,7 @@ export default function Card({products}) {
     const color = useSelector((state) => state.color)
     const dispatch = useDispatch();
     dispatch(addToLib(products));
+    
     const lib = useSelector(state => state.counter.lib)
     const [data, setdata] = useState(lib)
     const [shear, setshear] = useState("")
