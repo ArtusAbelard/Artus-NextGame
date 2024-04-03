@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import Homepage from './Homepage'
 import Sliderhome from './Sliderhome'
 import { useSelector, useDispatch } from "react-redux"
+import Footer from './Footer'
 
 export default function HomeBody({products}) {
     const color = useSelector((state) => state.color) 
@@ -17,6 +18,7 @@ export default function HomeBody({products}) {
         <Sliderhome products={products} ></Sliderhome>
         <Homepage products={products} ></Homepage> 
         </div>
+        <Footer></Footer>
     </div>
     )
 }

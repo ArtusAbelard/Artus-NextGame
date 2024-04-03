@@ -1,6 +1,7 @@
 import Navbar from "../../ui/Navbar";
 import Card from "../../ui/Card";
 import Gameskeleton from "../../ui/skeleton/Gameskeleton";
+import Footer from "../../ui/Footer";
 
 async function getProduct(){
     const res = await fetch('https://www.freetogame.com/api/games')
@@ -15,6 +16,7 @@ export default async function Page() {
         <Navbar></Navbar>
         <Card products={products}></Card>
         {/* <Gameskeleton></Gameskeleton> */}
+        <Footer></Footer>
     </div>
     )
 }

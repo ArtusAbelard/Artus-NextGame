@@ -35,9 +35,9 @@ export default function Homepage({products}) {
 
     
     return (
-        <div className={` h-[42.4rem] z-0 max-[1025px]:h-[70rem] max-[425px]:h-[70rem] max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center  ${color.actual==true?"invert ":""}`}>
+        <div className={` h-[32.1rem] z-0 max-[1025px]:h-[70rem] max-[425px]:h-[70rem] max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center  ${color.actual==true?"invert ":""}`}>
           
-            <div className='w-screen pt-[8rem] h-[33rem]  flex justify-center  gap-[5rem] items-center  max-[425px]:w-[20rem] max-[1025px]:h-[61rem] max-[1025px]:flex-col '>
+            <div className='w-screen pt-[8rem] h-[28rem]  flex justify-center  gap-[5rem] items-center  max-[425px]:w-[20rem] max-[1025px]:h-[61rem] max-[1025px]:flex-col '>
                 <div className='w-[40rem] h-[35rem] rounded-xl max-[425px]:w-[30rem]  max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center max-[425px]:flex-col'>
                 
                     <h1 className={`text-white h-[4rem]  text-3xl font-bold pb-7 ${color.actual==true?"invert ":""}`}>Most Popular :</h1>

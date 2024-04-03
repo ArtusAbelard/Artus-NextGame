@@ -102,9 +102,10 @@
   }
   .bgnoborder{
     background-image: url(./../../public/img/vecteezynoborder.jpg);
-    background-position: fixed;
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+    background-position: top;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    
   }
   .navshadow{
     box-shadow: rgb(224, 136, 33) 0px 20px 30px -10px;

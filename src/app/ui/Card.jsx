@@ -30,7 +30,7 @@ export default function Card({products}) {
     }, [filterbtn])
  
     return (
-        <div className={`mt-[8rem] pt-[3rem] min-h-[53.9rem] w-full flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
+        <div className={`mt-[8rem] pt-[3rem] min-h-[43.3rem] w-full flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
             <div className="  h-[5rem]  text-white flex  items-center w-[103.5rem] max-[1445px]:w-[75rem] max-[1025px]:w-[49rem] max-[769px]:w-[38rem] max-[500px]:w-[22rem]">
                 <input onChange={(e)=>{setshear(e.target.value)}} type="text" placeholder="Shear" className="w-96 input input-bordered  bg-black" />
                 <div className=' w-full flex items-center justify-end'>
@@ -60,7 +60,7 @@ export default function Card({products}) {
             {
                 data.map((Element,id)=>{
                     return(
-                        <div className=" card card-compact w-96  bg-[#0E0E0E] shadow-xl">
+                        <div className=" card card-compact w-96  bg-[#0E0E0E] shadow-xl mb-5">
                         <figure><img className={`h-[13.7rem] ${color.actual==true?"invert":""}`} src={Element.thumbnail} alt="Shoes" /></figure>
                         <div className="card-body h-[12rem] text-white">
                             <h2 className="card-title">{Element.title}</h2>
