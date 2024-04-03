@@ -13,6 +13,12 @@ export default function Gameskeleton(props) {
         <Navbar></Navbar>
         <div className={` flex pt-[9rem] overflow-hidden justify-center items-center bg-[#1e1e1e] flex-wrap gap-10 min-h-[55.9rem] bgnoborder  ${color.actual==true?"invert":""}`}>
             <div className='invert flex flex-wrap gap-10 min-h-[55.9rem] justify-center items-center'>
+            <div className='w-[103.5rem] pt-5 flex'>
+                <div className="skeleton h-[3rem] w-[25rem]  invert"></div>
+                <div className='w-full flex justify-end'>
+                    <div className="skeleton h-[3rem] w-28 ms-[17rem] invert"></div>
+                </div>
+            </div>
                 {
                     skeleton.map((Element,id)=>{
                         return(

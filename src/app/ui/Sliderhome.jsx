@@ -14,7 +14,7 @@ export default function Sliderhome({products}) {
     for (let i = 0; i < 8; i++) {
         imgrandom.push(getRandomInt(395))
     }
-    console.log(products);
+
     return (
         <div className='slider overflow-hidden z-0 '>
                 <div className={`slide-track z-0 ${color.actual==true?"invert":""} `}>

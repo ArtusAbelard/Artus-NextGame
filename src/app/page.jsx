@@ -13,7 +13,7 @@ async function getProduct(){
 }
 
 export default async function Home() {
-  // const color = useSelector((state) => state.color)
+
 
   const products = await getProduct()
   return (
