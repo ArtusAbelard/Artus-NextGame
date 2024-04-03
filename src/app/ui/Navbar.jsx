@@ -72,9 +72,9 @@ export default function Navbar() {
                     <div tabIndex={0} className={`mt-3  z-[1] border-[1px] card card-compact dropdown-content w-52 bg-[#0E0E0E] shadow ${!connexion.status?"hidden":""}`}>
                         <div className="card-body">
                         <span className="font-bold text-lg text-white">0 Items</span>
-                        <span className=" text-[#E08821]">Subtotal: $999</span>
+                        {/* <span className=" text-[#E08821]">Subtotal: $999</span> */}
                         <div className="card-actions">
-                            <button className="btn bg-[#E08821] border-0 btn-block text-black hover:text-white">View cart</button>
+                            <Link href='/favoris'><button className="btn bg-[#E08821] border-0 btn-block text-black hover:text-white">Favorites</button></Link>
                         </div>
                         </div>
                     </div>

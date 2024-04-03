@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { addToLib } from '../../store/slice'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import star from '../../../public/img/favoris.png'
+import Image from 'next/image'
 
 export default function Card({products}) {
     const color = useSelector((state) => state.color)
@@ -65,6 +67,7 @@ export default function Card({products}) {
                         <div className="card-body h-[12rem] text-white">
                             <h2 className="card-title">{Element.title}</h2>
                             <p>{Element.short_description}</p>
+                            <Image className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image>
                             <div className="card-actions justify-end">
                                 <Btndetail id={id} bails={Element}></Btndetail>
                             </div>

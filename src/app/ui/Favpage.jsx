@@ -8,8 +8,10 @@ export default function Favpage(props) {
     
 
     return (
-        <div className={`w-full h-[51.7rem] bgnoborder ${color.actual==true?"invert":""}`}>
-
+        <div className={`w-full h-[51.7rem] bgnoborder flex justify-center items-center ${color.actual==true?"invert":""}`}>
+            <div className='w-[70rem] h-[35rem] rounded-lg mt-[8rem] bg-black'>
+                
+            </div>
         </div>
     )
 }
