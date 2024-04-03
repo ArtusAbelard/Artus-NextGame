@@ -102,7 +102,7 @@
   }
   .bgnoborder{
     background-image: url(./../../public/img/vecteezynoborder.jpg);
-    background-position: center;
+    background-position: fixed;
     /* background-size: cover;
     background-repeat: no-repeat; */
   }
