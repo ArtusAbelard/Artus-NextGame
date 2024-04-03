@@ -16,9 +16,9 @@ export default async function Home() {
   // const color = useSelector((state) => state.color)
 
   const products = await getProduct()
-  return (<div>
-   
-    <HomeBody products={products}></HomeBody>
+  return (
+    <div>
+      <HomeBody products={products}></HomeBody>
     </div>
 
   );

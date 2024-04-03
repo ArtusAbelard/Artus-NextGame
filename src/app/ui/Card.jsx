@@ -13,43 +13,22 @@ export default function Card({products}) {
     dispatch(addToLib(products));
     const lib = useSelector(state => state.counter.lib)
     const [data, setdata] = useState(lib)
-    const [shear, setshear] = useState()
+    const [shear, setshear] = useState("")
 
     function sorteddata(element) {
         setdata([...data].sort((a, b) =>  b.title.slice(0,1) - a.title.slice(0,1)))
          
     }
     
-    // useEffect(() => {
-    //     console.log(shear);
-    //     Filter()
-        
-    // }, [shear])
-    
-    const Filter = (event) => {
+    useEffect(() => {
         setdata(lib.filter(f => f.title.toLowerCase().includes(shear) ))
-    }
-
-    const chercherIndex = (element) => {
-        const i = lib.findIndex((x) => x.name.common === element.name.common);
-        return i;
-    };
-    
         
-        
-        // useEffect(() => {
-        //     console.log(shear);
-        //     Filter()
-            
-        // }, [shear])
-        
-    
-    
-
+    }, [shear])
+ 
     return (
-        <div className={`mt-[8rem] pt-[3rem] min-h-[53rem] w-full flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
+        <div className={`mt-[8rem] pt-[3rem] min-h-[53.9rem] w-full flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
             <div className="  h-[5rem]  text-white flex items-center w-[103.5rem] gap-[75rem]">
-                <input onChange={(e)=>{setshear(e.target.value),Filter()}} type="text" placeholder="Shear" className="w-96 input input-bordered  bg-black" />
+                <input onChange={(e)=>{setshear(e.target.value)}} type="text" placeholder="Shear" className="w-96 input input-bordered  bg-black" />
                 <div className="dropdown dropdown-left">
                 <div tabIndex={0} role="button" className="btn m-1 bg-black text-white">Filters</div>
                 <ul tabIndex={0} className="dropdown-content bg-black text-white z-[1] menu p-2 shadow rounded-box w-52">
