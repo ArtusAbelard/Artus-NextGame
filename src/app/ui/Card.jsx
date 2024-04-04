@@ -8,17 +8,19 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import star from '../../../public/img/favoris.png'
 import Image from 'next/image'
+import { panierset } from '../../store/panier'
 
 export default function Card({products}) {
     const color = useSelector((state) => state.color)
     const dispatch = useDispatch();
     dispatch(addToLib(products));
-    
+    const connexion = useSelector((state) => state.connect)
     const lib = useSelector(state => state.counter.lib)
     const [data, setdata] = useState(lib)
     const [shear, setshear] = useState("")
     const [filterbtn, setfilterbtn] = useState("")
-
+    const panier = useSelector((state) => state.panier)
+    
     function sorteddata(element) {
         setdata([...data].sort((a, b) =>  b.title.slice(0,1) - a.title.slice(0,1)))   
     }
@@ -31,6 +33,14 @@ export default function Card({products}) {
             setdata(lib.filter((d) => d.genre.toLowerCase()===filterbtn))
         }
     }, [filterbtn])
+
+    function panierpush(Element){
+        dispatch(panierset(Element.title))
+        console.log(panier);
+    }
+    useEffect(() => {
+        console.log(panier);  
+    }, [panier])
  
     return (
         <div className={`mt-[8rem] pt-[3rem] min-h-[43.3rem] w-full flex bgnoborder bg-[#1e1e1e] justify-center items-center flex-wrap gap-10  ${color.actual==true?"invert":""}`}>
@@ -68,7 +78,8 @@ export default function Card({products}) {
                         <div className="card-body h-[12rem] text-white">
                             <h2 className="card-title">{Element.title}</h2>
                             <p>{Element.short_description}</p>
-                            <Image className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image>
+                            {connexion.status==true? <Image onClick={()=>{dispatch(panierset(Element.title))}} className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image>:""}
+                            {/* <Image onClick={()=>{dispatch(panierset(Element.title))}} className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image> */}
                             <div className="card-actions justify-end">
                                 <Btndetail id={id} bails={Element}></Btndetail>
                             </div>

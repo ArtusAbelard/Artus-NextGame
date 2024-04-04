@@ -2,16 +2,19 @@
 
 import { useRouter } from "next/navigation"
 import { useSelector, useDispatch } from "react-redux"
+import { panierset } from '../../store/panier'
 
 export default function Btndetail({id,bails}) {
+    
     const router = useRouter()
-    const chercherIndex = (element) => {
-        const i = lib.findIndex((x) => x.title === element.title);
+    const chercherIndex = (bails) => {
+        const i = lib.findIndex((x) => x.title === bails.title);
         return i;
     };
-    function detailroot(id){
+    function detailroot(bails){
         
-        router.push(`/produits/${chercherIndex(id)}`)
+        router.push(`/produits/${chercherIndex(bails)}`)
+        
     }
      const lib = useSelector(state => state.counter.lib)
     
