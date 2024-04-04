@@ -14,8 +14,8 @@ export default async function Page() {
     return(
     <div className="min-w-screen  min-h-screen flex  items-center flex-col">
         <Navbar></Navbar>
-        <Card products={products}></Card>
-        {/* <Gameskeleton></Gameskeleton> */}
+            <Card products={products}></Card>
+            {/* <Gameskeleton></Gameskeleton> */}
         <Footer></Footer>
     </div>
     )

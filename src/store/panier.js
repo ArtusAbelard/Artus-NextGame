@@ -4,7 +4,7 @@ export const panier = createSlice({
   name: 'panier',
   initialState: {
     panier:[],
-    prix:[],
+    img:[],
     id:''  
   },
   reducers: {
@@ -14,13 +14,13 @@ export const panier = createSlice({
     panierremove: (state, action) => {
         state.panier.splice(action.payload,1)
     },
-    // prixset: (state,action) => {
-    //   state.prix.push(action.payload)
-    // },
-    // prixremove: (state,action) => {
-    //   state.prix.splice(action.payload,1)
-    // }
+    imgset: (state,action) => {
+      state.img.push(action.payload)
+    },
+    imgremove: (state,action) => {
+      state.img.splice(action.payload,1)
+    }
   },
 })
-export const {panierset,panierremove} = panier.actions
+export const {panierset,panierremove,imgset,imgremove} = panier.actions
 export default panier.reducer

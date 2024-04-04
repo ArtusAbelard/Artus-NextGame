@@ -8,7 +8,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import star from '../../../public/img/favoris.png'
 import Image from 'next/image'
-import { panierset } from '../../store/panier'
+import { panierset , imgset } from '../../store/panier'
+import Carddaisy from '../ui/Carddaisy'
 
 export default function Card({products}) {
     const color = useSelector((state) => state.color)
@@ -20,6 +21,7 @@ export default function Card({products}) {
     const [shear, setshear] = useState("")
     const [filterbtn, setfilterbtn] = useState("")
     const panier = useSelector((state) => state.panier)
+    const [hide, sethide] = useState("")
     
     function sorteddata(element) {
         setdata([...data].sort((a, b) =>  b.title.slice(0,1) - a.title.slice(0,1)))   
@@ -69,22 +71,11 @@ export default function Card({products}) {
                     </ul>
                     </div>
                 </div>
-                </div>
+            </div>
             {
                 data.map((Element,id)=>{
                     return(
-                        <div className=" card card-compact w-96  bg-[#0E0E0E] shadow-xl mb-5">
-                        <figure><img className={`h-[13.7rem] ${color.actual==true?"invert":""}`} src={Element.thumbnail} alt="Shoes" /></figure>
-                        <div className="card-body h-[12rem] text-white">
-                            <h2 className="card-title">{Element.title}</h2>
-                            <p>{Element.short_description}</p>
-                            {connexion.status==true? <Image onClick={()=>{dispatch(panierset(Element.title))}} className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image>:""}
-                            {/* <Image onClick={()=>{dispatch(panierset(Element.title))}} className='invert cursor-pointer ms-1 w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]'  alt="" src={star}></Image> */}
-                            <div className="card-actions justify-end">
-                                <Btndetail id={id} bails={Element}></Btndetail>
-                            </div>
-                        </div>
-                        </div>
+                        <Carddaisy Element={Element}  id={id}></Carddaisy>
                     )
                 })
             }

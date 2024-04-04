@@ -156,4 +156,7 @@
     height: 200px;
     width: 250px;
   }
+  .enleverscroll{
+    scrollbar-width: none;
+  }
  
