@@ -9,9 +9,9 @@ export default function Btndetail({id,bails}) {
         const i = lib.findIndex((x) => x.title === element.title);
         return i;
     };
-    function detailroot(bails){
+    function detailroot(id){
         
-        router.push(`/produits/${chercherIndex(bails)}`)
+        router.push(`/produits/${chercherIndex(id)}`)
     }
      const lib = useSelector(state => state.counter.lib)
     
