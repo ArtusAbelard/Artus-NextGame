@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { useSelector} from "react-redux"
+import star from '../../../public/img/favoris.png'
+import Image from 'next/image'
 
 export default function Details(props) {
     const color = useSelector((state) => state.color)
@@ -16,7 +18,7 @@ export default function Details(props) {
                         </div>
                     </div>
                     <div className='h-full w-1/2 flex items-center  justify-center flex-col text-white max-[426px]:w-full '>
-                        <h1 className='text-2xl font-bold mt-[10rem] tracking-wide max-[426px]:mt-0 max-[426px]:w-[16rem] max-[426px]:text-xl'>About {props.products[props.id].title} :</h1>
+                        <h1 className='text-2xl font-bold mt-[10rem] tracking-wide max-[426px]:mt-0 max-[426px]:w-[16rem] max-[426px]:text-xl'>About {props.products[props.id].title} : </h1>
                         <p className='w-[30rem] text-xl mt-7  max-[1030px]:w-[23rem] max-[769px]:w-[16rem] max-[426px]:text-base'>{props.products[props.id].short_description}</p>
                         <ul className='w-[30rem] text-xl mt-5 gap-2 flex flex-col max-[1030px]:w-[23rem] max-[769px]:w-[16rem] max-[426px]:mb-[23rem] max-[426px]:text-base'>
                             <li>Developed by : {props.products[props.id].developer}</li>
@@ -32,6 +34,7 @@ export default function Details(props) {
                         <h4 className='text-white font-medium max-[769px]:w-[14rem]'>Publish by : {props.products[props.id].publisher}</h4>
                     </div>
                     <div className='h-full w-1/2 flex items-center justify-center max-[426px]:w-full max-[426px]:mt-[15rem]'>
+                        <Image className={`invert cursor-pointer absolute top-[20%] w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]`}  alt="" src={star}></Image>
                     <a href={props.products[props.id].freetogame_profile_url}> <button className="btn hover:text-white bg-[#E08821] text-black border-0"><p className='w-full text-center font-bold text-xl '>PLAY THE GAME </p></button></a>
                     </div>
                  </div>

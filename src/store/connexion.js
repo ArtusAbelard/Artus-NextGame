@@ -5,7 +5,7 @@ export const connexion = createSlice({
   initialState: {
     name:["tribelha","artus"],
     password:["guest","admin"],
-    status:true,
+    status:false,
   },
   
   reducers: {
