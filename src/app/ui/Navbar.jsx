@@ -16,6 +16,7 @@ export default function Navbar() {
     const dispatch = useDispatch();
     const [state, setstate] = useState(true)
     const panier = useSelector((state) => state.panier)
+    const [uniquearray, setuniquearray] = useState([...new Set(panier.panier)])
     
     return (
         <div className={`navbar z-50 h-[8rem] navshadow bg-[#0E0E0E] absolute  ${color.actual==true?"invert ":""}`}>

@@ -9,6 +9,8 @@ import { panierset , imgset } from '../../store/panier'
 export default function Details(props) {
     const color = useSelector((state) => state.color)
     const dispatch = useDispatch();
+    const panier = useSelector((state) => state.panier)
+    const connexion = useSelector((state) => state.connect)
     
     return (
         <div className={`mt-[6rem]  w-[100%] min-h-[895px] flex bg-[#1e1e1e] justify-center items-center flex-wrap gap-10 bgdetail max-[426px]:pt-0  ${color.actual==true?"invert":""}`}>
@@ -36,7 +38,10 @@ export default function Details(props) {
                         <h4 className='text-white font-medium max-[769px]:w-[14rem]'>Publish by : {props.products[props.id].publisher}</h4>
                     </div>
                     <div className='h-full w-1/2 flex items-center justify-center max-[426px]:w-full max-[426px]:mt-[15rem]'>
-                        <Image onClick={()=>{dispatch(panierset(props.products[props.id].title),dispatch(imgset(props.products[props.id].thumbnail)))}} className={`invert cursor-pointer absolute top-[20%] w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]`}  alt="" src={star}></Image>
+                        {
+                            connexion.status==true? <Image onClick={()=>{panier.panier.includes(props.products[props.id].title)?"":dispatch(panierset(props.products[props.id].title),dispatch(imgset(props.products[props.id].thumbnail)))}} className={`invert cursor-pointer absolute top-[20%] w-[20px] h-[20px] hover:w-[25px] hover:h-[25px] transition-[3s]`}  alt="" src={star}></Image>:""
+                        }
+                       
                     <a href={props.products[props.id].freetogame_profile_url}> <button className="btn hover:text-white bg-[#E08821] text-black border-0"><p className='w-full text-center font-bold text-xl '>PLAY THE GAME </p></button></a>
                     </div>
                  </div>

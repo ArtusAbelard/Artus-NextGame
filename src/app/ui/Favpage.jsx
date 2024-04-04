@@ -1,16 +1,24 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { panierremove } from '../../store/panier'
+import { useState } from 'react'
+
 
 export default function Favpage(props) {
     const color = useSelector((state) => state.color)
     const connexion = useSelector((state) => state.connect) 
     const panier = useSelector((state) => state.panier)
+    const lib = useSelector(state => state.counter.lib)
     const dispatch = useDispatch();
-    console.log(panier.img);
-    
+    const [uniquearray, setuniquearray] = useState([...new Set(panier.panier)]) // remove same items in array
+    const chercherIndex = (Element) => {
+        const i = lib.findIndex((x) => x.title === Element);
+        return i;
+    };
+    console.log(panier);
+   
     return (
         <div className={`w-full h-[51.6rem] bgnoborder flex justify-center items-center ${color.actual==true?"invert":""}`}>
             <div className='w-[70rem] h-[40rem] rounded-xl mt-[8rem] bg-black flex justify-center relative items-center flex-wrap overflow-y-scroll enleverscroll '>
