@@ -8,7 +8,7 @@ import Sliderhome from "./ui/Sliderhome";
 import HomeBody from './ui/HomeBody'
 
 async function getProduct(){
-  const res = await fetch('https://www.freetogame.com/api/games')
+  const res = await fetch('https://www.freetogame.com/api/games')  // fetching api 
   return res.json()
 }
 

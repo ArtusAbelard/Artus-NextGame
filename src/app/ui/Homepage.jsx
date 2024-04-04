@@ -18,12 +18,12 @@ export default function Homepage({products}) {
         // Retourner la date la plus proche
         return dates[minIndex];
       }
-        const dates = ["2020-10-15", "2020-10-12", "2020-10-18", "2020-10-10"];
+        const dates = ["2020-10-15", "2020-10-12", "2020-10-18", "2020-10-10"]; // check if that work 
         
-        let now = new Date();
+        let now = new Date(); // func to find irl date
         console.log(now);
         let monthactual = now.getMonth()+1
-        let actual = now.getFullYear()+"-"+monthactual+"-"+now.getDate()
+        let actual = now.getFullYear()+"-"+monthactual+"-"+now.getDate() 
         const referenceDate = actual;
         const closestDate = getClosestDate(dates, referenceDate);
 
@@ -31,7 +31,7 @@ export default function Homepage({products}) {
         // console.log(products[0].release_date);
         // const result = products.filter((products) => products.release_date);
     return (
-        <div className={` h-[32.1rem] z-0 max-[1025px]:h-[70rem] max-[425px]:h-[70rem] max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center  ${color.actual==true?"invert ":""}`}>
+        <div className={` h-[32.1rem] z-0 max-[1025px]:h-[70rem] max-[425px]:h-[70rem] max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center  ${color.actual==true?"invert ":""}`}>  {/* function for darkmode*/}
           
             <div className='w-screen pt-[8rem] h-[28rem]  flex justify-center  gap-[5rem] items-center  max-[425px]:w-[20rem] max-[1025px]:h-[61rem] max-[1025px]:flex-col '>
                 <div className='w-[40rem] h-[35rem] rounded-xl max-[425px]:w-[30rem]  max-[425px]:flex max-[425px]:items-center max-[425px]:justify-center max-[425px]:flex-col'>
@@ -46,7 +46,7 @@ export default function Homepage({products}) {
                 </div> 
                 <div id="slide2" className="carousel-item relative w-full max-[425px]:w-[23rem] ">
                     <img src="https://www.freetogame.com/g/540/thumbnail.jpg " className="w-full rounded-xl" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">    {/* first carousel*/}
                     <a href="#slide1" className="btn btn-circle">❮</a> 
                     <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
@@ -86,7 +86,7 @@ export default function Homepage({products}) {
                     </div> 
                     <div id="slide7" className="carousel-item relative w-full max-[425px]:w-[23rem]">
                         <img src="https://www.freetogame.com/g/575/thumbnail.jpg" className="w-full rounded-xl" />
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">     {/* fsecond carousel*/}
                         <a href="#slide6" className="btn btn-circle">❮</a> 
                         <a href="#slide9" className="btn btn-circle">❯</a>
                         </div>

@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// panier reducer
+
 export const panier = createSlice({
   name: 'panier',
   initialState: {

@@ -13,7 +13,7 @@ export default async function Product({params}) {
     return(
         <div className="min-w-screen  min-h-screen flex  items-center flex-col">
             <Navbar></Navbar>
-            <Details id={params.id} products={products}></Details>
+            <Details id={params.id} products={products}></Details>  {/*give data in props also id*/}
             {/* <Detailskeleton></Detailskeleton> */}
         </div>
     )

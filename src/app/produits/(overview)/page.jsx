@@ -4,7 +4,7 @@ import Gameskeleton from "../../ui/skeleton/Gameskeleton";
 import Footer from "../../ui/Footer";
 
 async function getProduct(){
-    const res = await fetch('https://www.freetogame.com/api/games')
+    const res = await fetch('https://www.freetogame.com/api/games')  // fetch api 
     return res.json()
 }
 

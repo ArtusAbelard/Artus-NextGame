@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// darkmode reducer
+
 export const color = createSlice({
   name: 'color',
   initialState: {

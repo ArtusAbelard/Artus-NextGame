@@ -8,11 +8,11 @@ export default function Sliderhome({products}) {
 
     const lib = useSelector(state => state.counter.lib)
     function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
+        return Math.floor(Math.random() * max);// function to have random id on slider 
       }
     let imgrandom = []
     for (let i = 0; i < 8; i++) {
-        imgrandom.push(getRandomInt(395))
+        imgrandom.push(getRandomInt(395))  // function to have random id on slider 
     }
 
     return (
@@ -42,7 +42,6 @@ export default function Sliderhome({products}) {
                     <div className='slide z-0'>
                         <img className='z-0' src={products[imgrandom[7]].thumbnail} alt="" />
                     </div>
-
                     <div className='slide z-0'>
                         <img className='z-0' src={products[imgrandom[0]].thumbnail} alt="" />
                     </div>

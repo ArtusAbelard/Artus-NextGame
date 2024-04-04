@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// log in and register reducer
+
 export const connexion = createSlice({
   name: 'connect',
   initialState: {
